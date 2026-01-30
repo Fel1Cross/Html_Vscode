@@ -1,0 +1,12 @@
+# JDK (IMPORTANTE)
+JavaVscode/PrimeiroProjetoVscode/oracleJdk-25/
+
+# VS Code
+.vscode/
+
+# Java
+*.class
+*.jar
+
+# Node
+node_modules/

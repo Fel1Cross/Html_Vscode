@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JG Reformas</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+}
+
+/* MENU */
+header{
+    background:#222;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+
+nav{
+    background:#333;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#f0a500;
+}
+
+/* BANNER */
+.banner{
+    background:url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") center/cover;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.banner h1{
+    font-size:40px;
+}
+
+/* SEÇÕES */
+section{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.servicos{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    width:250px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* BOTÃO WHATSAPP */
+.whats{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 20px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>JG Reformas</h1>
+    <p>Construção e Reformas em Geral</p>
+</header>
+
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<div class="banner">
+    <h1>Transformamos seu sonho em realidade</h1>
+    <p>Qualidade, confiança e compromisso na sua obra</p>
+</div>
+
+<section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>
+        A JG Reformas é especializada em construção civil e reformas
+        residenciais e comerciais. Trabalhamos com responsabilidade,
+        prazo justo e acabamento de qualidade.
+    </p>
+</section>
+
+<section id="servicos">
+    <h2>Nossos Serviços</h2>
+
+    <div class="servicos">
+        <div class="card">
+            <h3>Reformas</h3>
+            <p>Reformas completas de casas, apartamentos e comércios.</p>
+        </div>
+
+        <div class="card">
+            <h3>Construção</h3>
+            <p>Construímos do zero com qualidade e segurança.</p>
+        </div>
+
+        <div class="card">
+            <h3>Pintura</h3>
+            <p>Pintura interna e externa com ótimo acabamento.</p>
+        </div>
+
+        <div class="card">
+            <h3>Elétrica e Hidráulica</h3>
+            <p>Instalações e manutenções profissionais.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Solicite seu orçamento sem compromisso!</p>
+    <p><b>Telefone:</b> (00) 00000-0000</p>
+    <p><b>Email:</b> contato@jgreformas.com</p>
+
+    <a class="whats" href="https://wa.me/5500000000000" target="_blank">
+        Falar no WhatsApp
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 JG Reformas - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>

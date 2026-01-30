@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Barbearia Gold Lux</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0c0c0c;
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:black;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav h1{
+    color:#d4af37;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+/* HERO */
+
+.hero{
+    height:95vh;
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
+    url("https://images.unsplash.com/photo-1585747860715-2ba37e788b70");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h2{
+    font-size:50px;
+}
+
+.hero span{
+    color:#d4af37;
+}
+
+.btn{
+    background:#d4af37;
+    border:none;
+    padding:14px 30px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:20px;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+/* SECTIONS */
+
+section{
+    padding:80px 8%;
+    text-align:center;
+}
+
+h2{
+    margin-bottom:20px;
+    font-size:32px;
+    color:#d4af37;
+}
+
+/* SERVIÇOS */
+
+.cards{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#1a1a1a;
+    padding:30px;
+    width:260px;
+    border-radius:10px;
+    transition:0.3s;
+    border:1px solid #d4af37;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* GALERIA */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+    background:black;
+    padding:30px;
+    text-align:center;
+    border-top:1px solid #d4af37;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+    .hero h2{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <h1>💈 Gold Lux</h1>
+    <div>
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h2>Experiência <span>Premium</span> em Estilo</h2>
+        <p>Cortes de alto padrão para homens de atitude</p>
+        <button class="btn" onclick="agendar()">Agendar VIP</button>
+    </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+<h2>Serviços Premium</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Corte Luxo</h3>
+<p>R$ 60</p>
+</div>
+
+<div class="card">
+<h3>Barba Terapia</h3>
+<p>R$ 50</p>
+</div>
+
+<div class="card">
+<h3>Combo Gold</h3>
+<p>R$ 100</p>
+</div>
+
+</div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+<h2>Galeria de Estilos</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1593702288056-f4a707a3b373">
+<img src="https://images.unsplash.com/photo-1622288432450-277d0fef5ed6">
+<img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486">
+<img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a">
+</div>
+
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+<h2>Sobre a Gold Lux</h2>
+<p>
+Atendimento exclusivo, ambiente sofisticado e barbeiros especialistas.
+Cada cliente recebe um tratamento VIP.
+</p>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+<h2>Contato</h2>
+<p>📍 Rua Premium, 100</p>
+<p>📞 (11) 98888-7777</p>
+
+<button class="btn" onclick="whatsapp()">WhatsApp VIP</button>
+</section>
+
+<footer>
+© 2026 Barbearia Gold Lux — Alto padrão em estilo masculino
+</footer>
+
+<script>
+function agendar(){
+    alert("Agendamento VIP aberto! Entre em contato pelo WhatsApp.");
+}
+
+function whatsapp(){
+    window.open("https://wa.me/5511988887777");
+}
+</script>
+
+</body>
+</html>
+

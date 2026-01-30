@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orçamento Rápido</title>
+
+<style>
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.box{
+    background:white;
+    padding:30px;
+    width:100%;
+    max-width:350px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h2{
+    margin-top:0;
+    color:#333;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+input:focus{
+    outline:none;
+    border-color:#f0a500;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#f0a500;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#d48f00;
+}
+
+#resultado{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+    color:#2c3e50;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Calcular Orçamento</h2>
+
+    <input 
+        type="number" 
+        id="metros" 
+        placeholder="Metros da obra (m²)"
+        min="1"
+    >
+    <br><br>
+
+    <button onclick="calcular()">Calcular Orçamento</button>
+
+    <p id="resultado"></p>
+</div>
+
+<script>
+function calcular(){
+    const precoPorMetro = 150;
+    const metros = parseFloat(document.getElementById("metros").value);
+    const resultado = document.getElementById("resultado");
+
+    if(!metros || metros <= 0){
+        resultado.innerHTML = "⚠️ Informe um valor válido!";
+        resultado.style.color = "red";
+        return;
+    }
+
+    const total = metros * precoPorMetro;
+
+    const valorFormatado = total.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    });
+
+    resultado.style.color = "#2c3e50";
+    resultado.innerHTML = `Valor estimado: ${valorFormatado}`;
+}
+</script>
+
+</body>
+</html>
